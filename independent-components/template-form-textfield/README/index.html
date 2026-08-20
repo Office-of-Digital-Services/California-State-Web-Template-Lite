@@ -1,0 +1,90 @@
+<h1>Template Form TextField Component</h1>
+<p>A reusable text input form component with label and CSS-driven styling options.</p>
+<h2>Features</h2>
+<ul>
+<li><strong>Required Field Indicator</strong>: Displays a red asterisk (*) before the label when the field is required using pure CSS</li>
+<li><strong>Dark Border Variant</strong>: Option to use a darker border color for visual distinction</li>
+<li><strong>Accessible</strong>: Proper label-input association using <code>for</code> and <code>id</code> attributes</li>
+<li><strong>Responsive</strong>: Scales appropriately on different device sizes</li>
+<li><strong>CSS Custom Properties</strong>: Uses CSS variables for easy theming</li>
+<li><strong>No JavaScript Required</strong>: All styling is handled with CSS data attributes</li>
+</ul>
+<h2>Usage</h2>
+<h3>Basic Example</h3>
+<pre><code class="language-html">&lt;label class=&quot;template-form-textfield-label&quot; for=&quot;InputName&quot;&gt;Full name&lt;/label&gt;
+&lt;input
+  type=&quot;text&quot;
+  class=&quot;template-form-textfield-input&quot;
+  id=&quot;InputName&quot;
+  placeholder=&quot;Full name&quot; /&gt;
+</code></pre>
+<h3>With Required Indicator</h3>
+<p>Add <code>data-required=&quot;true&quot;</code> to the label to display a red asterisk:</p>
+<pre><code class="language-html">&lt;label class=&quot;template-form-textfield-label&quot; data-required=&quot;true&quot; for=&quot;InputName&quot;&gt;Full name&lt;/label&gt;
+&lt;input
+  type=&quot;text&quot;
+  class=&quot;template-form-textfield-input&quot;
+  id=&quot;InputName&quot;
+  placeholder=&quot;Full name&quot;
+  required /&gt;
+</code></pre>
+<h3>With Dark Border</h3>
+<p>Add <code>data-border-dark=&quot;true&quot;</code> to the input for a darker border:</p>
+<pre><code class="language-html">&lt;label class=&quot;template-form-textfield-label&quot; data-required=&quot;true&quot; for=&quot;InputName&quot;&gt;Full name&lt;/label&gt;
+&lt;input
+  type=&quot;text&quot;
+  class=&quot;template-form-textfield-input&quot;
+  id=&quot;InputName&quot;
+  placeholder=&quot;Full name&quot;
+  data-border-dark=&quot;true&quot;
+  required /&gt;
+</code></pre>
+<h2>Data Attributes</h2>
+<ul>
+<li><code>data-required=&quot;true&quot;</code> - Adds a red asterisk to the label (CSS-only implementation using <code>::before</code> pseudo-element)</li>
+<li><code>data-border-dark=&quot;true&quot;</code> - Changes border color from gray-300 to gray-700 for higher contrast</li>
+</ul>
+<h2>CSS Classes</h2>
+<ul>
+<li><code>.template-form-textfield-label</code> - Styles for the label element</li>
+<li><code>.template-form-textfield-input</code> - Styles for the input element</li>
+</ul>
+<h2>CSS Custom Properties (Themeable)</h2>
+<p>The component uses the following CSS variables for theming (with fallback values):</p>
+<ul>
+<li><code>--font-family-sans-serif</code> - Font family (fallback: &quot;Public Sans&quot;, system fonts)</li>
+<li><code>--text-color</code> - Text color (fallback: #3b3a48)</li>
+<li><code>--text-required-color</code> - Required asterisk color (fallback: #cd402d)</li>
+<li><code>--body-bg</code> - Background color (fallback: #fff)</li>
+<li><code>--gray-300</code> - Default border color (fallback: #d2d2d6)</li>
+<li><code>--gray-700</code> - Dark border color (fallback: #5e5e6a)</li>
+<li><code>--outline-default-color</code> - Focus outline color (fallback: #0b8ee5)</li>
+</ul>
+<h2>Styling Details</h2>
+<h3>Label Styling</h3>
+<ul>
+<li>Inline-block display for proper alignment</li>
+<li>Bold font weight (600) with increased font size</li>
+<li>Positioned relatively to support pseudo-elements</li>
+<li>Bottom margin for spacing</li>
+</ul>
+<h3>Input Styling</h3>
+<ul>
+<li>Full width within container</li>
+<li>Padding for comfortable clicking/typing</li>
+<li>1px solid border with customizable color</li>
+<li>Focus state with 2px outline and offset for accessibility</li>
+<li>Nested CSS for related variants</li>
+</ul>
+<h2>Browser Support</h2>
+<ul>
+<li>Chrome/Edge: Full support including CSS nesting</li>
+<li>Firefox: Full support including CSS nesting</li>
+<li>Safari: Full support including CSS nesting</li>
+<li>IE11: Limited support (CSS nesting not supported)</li>
+</ul>
+<h2>Files</h2>
+<ul>
+<li><code>template-form-textfield.html</code> - Component markup with data attributes and comments</li>
+<li><code>template-form-textfield.html.css</code> - Component styles using SCSS-style nesting</li>
+</ul>

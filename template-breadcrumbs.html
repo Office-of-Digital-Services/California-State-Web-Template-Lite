@@ -1,0 +1,97 @@
+
+<!-- This meta tag is for responsive design and ensures the page scales correctly on different devices. 
+ Omit it if your site has a different method for handling responsive design. -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- 
+  Breadcrumbs component
+  Renders a breadcrumb navigation trail.
+  The last item is marked as active.
+  Use data-mode="dark" on nav.template-breadcrumbs for white text/link styling.
+-->
+<nav aria-label="Breadcrumbs" class="template-breadcrumbs">
+  <ol>
+    <li><a href="javascript:;" title="Home page">Breadcrumb 1</a></li>
+    <li>
+      <a href="javascript:;" title="Examples landing page">Breadcrumb 2</a>
+    </li>
+    <li class="active">Breadcrumb 3</li>
+  </ol>
+</nav>
+
+<style>
+    
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Breadcrumbs Component Base */
+nav.template-breadcrumbs {
+  &[data-mode="dark"] {
+    color: var(--white, #fff);
+
+    > ol > li {
+      color: var(--white, #fff);
+
+      > a,
+      > a:hover,
+      > a:focus {
+        color: var(--white, #fff);
+      }
+    }
+  }
+
+  > ol {
+    padding: 0.5em 1rem;
+    padding-left: 0;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: var(--font-size-small, 0.875rem);
+
+    @media (width >= 576px) {
+      font-size: calc(var(--font-size-small, 0.875rem) + var(--ratio, 0.1vw));
+    }
+
+    > li {
+      position: relative;
+      padding-left: 0.75rem;
+      padding-right: 0.75rem;
+
+      > a {
+        padding: 0.375rem 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &::after {
+        content: "";
+        color: var(--text-muted, var(--gray-700, #5e5e6a));
+        border: none;
+        margin: 0 calc(var(--grid-gutter-width, 1rem) / 2);
+        font-size: 1.125rem;
+        font-weight: 200;
+        position: absolute;
+        border-left: 1px solid;
+        height: 70%;
+        top: 5px;
+        right: -9px;
+        transform: rotate(15deg);
+      }
+
+      &:last-child::after {
+        border-left: none;
+        margin: 0;
+      }
+    }
+  }
+}
+
+</style>

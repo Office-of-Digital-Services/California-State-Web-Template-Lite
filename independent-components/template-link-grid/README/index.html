@@ -1,0 +1,66 @@
+<h1>Template Link Grid Component</h1>
+<p>The Template Link Grid component displays a set of prominent links as bordered cards in a responsive grid. It uses the <code>.template-link-grid</code> root class and strict direct-child selectors, so the HTML structure must remain consistent.</p>
+<h2>Features</h2>
+<ul>
+<li>Card-style links with border, rounded corners, bottom accent border, and arrow indicator.</li>
+<li>Hover and focus states for accessibility and visual feedback.</li>
+<li>Bootstrap-like responsive layout behavior based on number of items.</li>
+<li>Supports 2, 3, 4, or 5+ direct child items.</li>
+<li>Optional <code>data-columns</code> override to force 2, 3, or 4 columns.</li>
+</ul>
+<h2>Required HTML Structure</h2>
+<p>Use this exact nesting pattern:</p>
+<pre><code class="language-html">&lt;div class=&quot;template-link-grid&quot;&gt;
+  &lt;div&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;Short link 1&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;Short link 2&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;Short link 3&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>Notes:</p>
+<ul>
+<li>The root wrapper must be <code>.template-link-grid</code>.</li>
+<li>Each grid item must be a direct child <code>div</code>.</li>
+<li>Each direct child <code>div</code> must contain a direct child <code>a</code> element.</li>
+</ul>
+<h2>Responsive Grid Behavior</h2>
+<p>At small widths, each item is full width.</p>
+<p>At <code>@media (width &gt;= 768px)</code>, columns are assigned by child count:</p>
+<ul>
+<li>2 items: each item is 50% width (<code>col-md-6</code> equivalent).</li>
+<li>3 items: each item is 33.33333% width (<code>col-md-4</code> equivalent).</li>
+<li>4 items: each item is 25% width (<code>col-md-3</code> equivalent).</li>
+<li>5 or more items: each item is 25% width (<code>col-md-3</code> equivalent, wraps to additional rows).</li>
+</ul>
+<h2>Optional Forced Columns</h2>
+<p>Set the <code>data-columns</code> attribute on the root wrapper to force a layout, regardless of item count:</p>
+<ul>
+<li><code>data-columns=&quot;2&quot;</code>: each item is 50% width at md and above.</li>
+<li><code>data-columns=&quot;3&quot;</code>: each item is 33.33333% width at md and above.</li>
+<li><code>data-columns=&quot;4&quot;</code>: each item is 25% width at md and above.</li>
+</ul>
+<p>Example:</p>
+<pre><code class="language-html">&lt;div class=&quot;template-link-grid&quot; data-columns=&quot;3&quot;&gt;
+  &lt;div&gt;&lt;a href=&quot;javascript:;&quot;&gt;Link 1&lt;/a&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;a href=&quot;javascript:;&quot;&gt;Link 2&lt;/a&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;a href=&quot;javascript:;&quot;&gt;Link 3&lt;/a&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;a href=&quot;javascript:;&quot;&gt;Link 4&lt;/a&gt;&lt;/div&gt;
+  &lt;div&gt;&lt;a href=&quot;javascript:;&quot;&gt;Link 5&lt;/a&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Limitations</h2>
+<ul>
+<li>Only <code>data-columns=&quot;2&quot;</code>, <code>data-columns=&quot;3&quot;</code>, and <code>data-columns=&quot;4&quot;</code> are supported.</li>
+<li>Invalid or unsupported <code>data-columns</code> values fall back to automatic child-count behavior.</li>
+</ul>
+<h2>Styling Notes</h2>
+<ul>
+<li>Link styles are applied to <code>.template-link-grid &gt; div &gt; a</code>.</li>
+<li>Arrow icon is rendered with the link <code>::after</code> pseudo-element.</li>
+<li>Focus outlines use <code>--outline-default-color</code> for accessibility.</li>
+</ul>

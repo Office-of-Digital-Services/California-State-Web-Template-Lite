@@ -1,0 +1,383 @@
+
+<!-- This meta tag is for responsive design and ensures the page scales correctly on different devices. 
+ Omit it if your site has a different method for handling responsive design. -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<div class="template-tabs-container">
+    <details name="template-tabs" open>
+        <summary>First tab</summary>
+        <div>
+            <h2>First tab content</h2>
+            <p>This is some content for the first tab.</p>
+        </div>
+    </details>
+    <details name="template-tabs">
+        <summary>Second tab</summary>
+        <div>
+            <h2>Second tab content</h2>
+            <p>This is some content for the second tab.</p>
+        </div>
+    </details>
+    <details name="template-tabs">
+        <summary>Third tab</summary>
+        <div>
+            <h2>Third tab content</h2>
+            <p>This is some content for the third tab.</p>
+        </div>
+    </details>
+    <details name="template-tabs">
+        <summary>Fourth tab</summary>
+        <div>
+            <h2>Fourth tab content</h2>
+            <p>This is some content for the fourth tab.</p>
+        </div>
+    </details>
+</div>
+
+<style>
+    *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.template-tabs-container {
+  > details {
+    margin-bottom: 0.75rem;
+    font-family: var(
+      --font-family-sans-serif,
+      "Public Sans",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      "Roboto",
+      "Helvetica Neue",
+      "Noto Sans",
+      sans-serif
+    );
+  }
+}
+
+@media (width <= 767px) {
+  .template-tabs-container {
+    > details {
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--border-color-default, #d4d4d7);
+
+      > summary {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0.875rem 1rem;
+        background: var(--tabs-mobile-background-color, #f5f5f5);
+        color: var(--link-color, #046b99);
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.15;
+        list-style: none;
+        cursor: pointer;
+        box-sizing: border-box;
+        
+
+        &::marker {
+          display: none;
+          content: "";
+        }
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        &::after {
+          content: "";
+          display: inline-block;
+          text-decoration: none;
+          position: absolute;
+          width: 0.45rem;
+          height: 0.45rem;
+          border-top: 2px solid var(--gray-900, #3b3a48);
+          border-left: 2px solid var(--gray-900, #3b3a48);
+          right: 1rem;
+          top: 50%;
+          vertical-align: middle;
+          transform-origin: center;
+          transform: translateY(-50%) rotate(135deg);
+          transition: transform 300ms ease-in-out;
+        }
+
+        &:focus {
+          outline: 2px solid var(--outline-default-color, #0b8ee5);
+          outline-offset: -2px;
+        }
+      }
+
+      &[open] > summary {
+        color: var(--gray-900, #3b3a48);
+        border-left: 4px solid var(--color-p1, #fdb81e);
+        padding-left: calc(1.5rem - 4px);
+      }
+
+      &[open] > summary::after {
+        transform: translate(-0.125rem, -50%) rotate(225deg);
+      }
+
+       &[open] > div {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .template-tabs-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+
+    > details {
+      display: contents;
+
+      > summary {
+        order: 1;
+        position: relative;
+        display: flex;
+        font-weight: 700;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 auto;
+        cursor: pointer;
+        border: none;
+        padding: 0.75rem 1rem;
+        list-style: none;
+        white-space: nowrap;
+        color: var(--link-color, #046b99);
+
+        &::marker {
+          display: none;
+          content: "";
+        }
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+      }
+
+      + details > summary {
+        border-left: none;
+      }
+
+      > summary:focus {
+        outline: 2px solid var(--outline-default-color, #0b8ee5);
+        outline-offset: -2px;
+      }
+
+      &:first-child > summary {
+        border-top-left-radius: 4px;
+      }
+
+      &:last-child > summary {
+        border-top-right-radius: 4px;
+      }
+
+      &:not([open]) > summary:hover,
+      &:not([open]) > summary:focus {
+        color: var(--link-color-hover, #214a68);
+      }
+
+      > div {
+        order: 2;
+        flex: 0 0 100%;
+        display: none;
+        border: 1px solid var(--border-color-default, #d4d4d7);
+        border-radius: 0 0 4px 4px;
+        padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
+        background: var(--tabs-body-background-color, #fff);
+      }
+
+      /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+      &[open]::details-content {
+        display: contents;
+      }
+
+      &[open] > div {
+        display: block;
+      }
+
+      &[open] > summary {
+        font-weight: 700;
+        background: var(--tabs-background-color, #fff);
+        color: var(--gray-900, #3b3a48);
+      }
+
+      &[open] > summary::after {
+        left: 0;
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 100%;
+        border-bottom: 3px solid;
+        border-color: var(--color-p1, #fdb81e);
+      }
+    }
+  }
+}
+
+</style>
+
+<script>
+     // MutationObserver.
+    function observeAttributeChange(elements, callback) {
+        var MutationObserverImpl = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+
+        if (!MutationObserverImpl) {
+            return function noop() { };
+        }
+
+        var observer = new MutationObserverImpl(function (mutations) {
+            mutations.forEach(function (mutation) {
+                if (mutation.type === "attributes") {
+                    callback(mutation.target, mutation.attributeName);
+                }
+            });
+        });
+
+        elements.forEach(function (element) {
+            observer.observe(element, { subtree: false, attributes: true });
+        });
+
+        return function disconnect() {
+            observer.disconnect();
+        };
+    }
+
+    // Initializes tab-like behavior for a details/summary group and returns cleanup.
+    function setupDetailsTabs(container) {
+        if (!container) {
+            return function noop() { };
+        }
+
+        var detailsItems = Array.from(container.querySelectorAll("details"));
+        var summaries = Array.from(container.querySelectorAll("details > summary"));
+
+        detailsItems.forEach(function (item) {
+            item.classList.add("details-item");
+        });
+
+        summaries.forEach(function (summary) {
+            summary.classList.add("details-tab");
+        });
+
+        // Keep exactly one panel open: opening one details closes the rest.
+        var disconnectObserver = observeAttributeChange(detailsItems, function (target, attributeName) {
+            if (attributeName === "open" && target.hasAttribute("open")) {
+                detailsItems.forEach(function (item) {
+                    if (item !== target) {
+                        item.removeAttribute("open");
+                    }
+                });
+            }
+        });
+
+        function preventClosingIfAlreadyOpen(event) {
+            var details = event.currentTarget.parentElement;
+            if (details && details.hasAttribute("open")) {
+                event.preventDefault();
+            }
+        }
+
+        // Tabs should not toggle closed when the currently open summary is activated.
+        function onKeyDown(event) {
+            if (event.key === " " || event.key === "Enter") {
+                preventClosingIfAlreadyOpen(event);
+            }
+        }
+
+        summaries.forEach(function (summary) {
+            summary.addEventListener("keydown", onKeyDown);
+            summary.addEventListener("click", preventClosingIfAlreadyOpen);
+        });
+
+        // React-like cleanup: remove listeners and disconnect observer on unmount.
+        return function cleanup() {
+            disconnectObserver();
+            summaries.forEach(function (summary) {
+                summary.removeEventListener("keydown", onKeyDown);
+                summary.removeEventListener("click", preventClosingIfAlreadyOpen);
+            });
+        };
+    }
+
+    // Expose initializer for framework integration (e.g. useEffect).
+    window.setupDetailsTabs = setupDetailsTabs;
+
+    var desktopTabsMediaQuery = window.matchMedia("(min-width: 768px)");
+    var tabsCleanup = null;
+
+    function ensureDesktopOpenState(container) {
+        if (!container) {
+            return;
+        }
+
+        var detailsItems = Array.from(container.querySelectorAll("details"));
+        if (detailsItems.length === 0) {
+            return;
+        }
+
+        var openItems = detailsItems.filter(function (item) {
+            return item.hasAttribute("open");
+        });
+
+        // Keep one currently open item if present; otherwise default to the first tab.
+        var itemToKeepOpen = openItems[0] || detailsItems[0];
+        detailsItems.forEach(function (item) {
+            if (item === itemToKeepOpen) {
+                item.setAttribute("open", "");
+            } else {
+                item.removeAttribute("open");
+            }
+        });
+    }
+
+    function toggleResponsiveTabs(event) {
+        var isDesktop = event.matches;
+        var tabsContainer = document.querySelector(".template-tabs-container");
+
+        if (isDesktop) {
+            if (!tabsCleanup) {
+                ensureDesktopOpenState(tabsContainer);
+                tabsCleanup = setupDetailsTabs(tabsContainer);
+            }
+            return;
+        }
+
+        if (tabsCleanup) {
+            tabsCleanup();
+            tabsCleanup = null;
+        }
+    }
+
+    function initializeTabs() {
+        toggleResponsiveTabs(desktopTabsMediaQuery);
+
+        if (typeof desktopTabsMediaQuery.addEventListener === "function") {
+            desktopTabsMediaQuery.addEventListener("change", toggleResponsiveTabs);
+        } else {
+            desktopTabsMediaQuery.addListener(toggleResponsiveTabs);
+        }
+    }
+
+    // Initialize when DOM is ready
+    if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initializeTabs);
+    } else {
+        initializeTabs();
+    }
+</script>

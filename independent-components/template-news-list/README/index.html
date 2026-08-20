@@ -1,0 +1,55 @@
+<h1>Template News List Component</h1>
+<p>The Template News List component presents recent news links in a clean, scannable list pattern inspired by the CA.gov homepage spotlight/news treatment. It uses a strict DOM structure with data-attribute hooks for styling.</p>
+<h2>Features</h2>
+<ul>
+<li>Section heading and divider-based list layout.</li>
+<li>News article links with accessible hover and focus states.</li>
+<li>Published date/type metadata styling.</li>
+<li>Final &quot;View all&quot; link for full news archive navigation.</li>
+<li>Data-attribute selectors for clear targeting and maintainability.</li>
+</ul>
+<h2>Required HTML Structure</h2>
+<p>Use this exact nesting pattern:</p>
+<pre><code class="language-html">&lt;div class=&quot;template-news-list&quot;&gt;
+  &lt;h2&gt;Latest news&lt;/h2&gt;
+  &lt;hr /&gt;
+
+  &lt;h3 data-link=&quot;news-article&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;News Article Title 1&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p data-date=&quot;published&quot;&gt;Month 00, 0000 | News&lt;/p&gt;
+  &lt;hr /&gt;
+
+  &lt;h3 data-link=&quot;news-article&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;News Article Title 2&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p data-date=&quot;published&quot;&gt;Month 00, 0000 | News&lt;/p&gt;
+  &lt;hr /&gt;
+
+  &lt;h3 data-link=&quot;news-article&quot;&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;News Article Title 3&lt;/a&gt;
+  &lt;/h3&gt;
+  &lt;p data-date=&quot;published&quot;&gt;Month 00, 0000 | News&lt;/p&gt;
+  &lt;hr /&gt;
+
+  &lt;p data-link=&quot;all&quot;&gt;&lt;a href=&quot;javascript:;&quot;&gt;View all&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Data Attributes</h2>
+<ul>
+<li><code>data-link=&quot;news-article&quot;</code>: targets each article title row.</li>
+<li><code>data-date=&quot;published&quot;</code>: targets article metadata text.</li>
+<li><code>data-link=&quot;all&quot;</code>: targets the bottom &quot;View all&quot; row.</li>
+</ul>
+<h2>Styling Behavior</h2>
+<ul>
+<li>Root container uses border, radius, and internal spacing.</li>
+<li><code>h3[data-link=&quot;news-article&quot;] &gt; a</code> and <code>p[data-link=&quot;all&quot;] &gt; a</code> share link color and interaction styles.</li>
+<li>Dates use muted text color to separate metadata from headlines.</li>
+<li>Horizontal rules create clear separation between entries.</li>
+</ul>
+<h2>Accessibility Notes</h2>
+<ul>
+<li>Link focus states include visible outlines using <code>--outline-default-color</code>.</li>
+<li>Maintain semantic heading/link structure (<code>h3 &gt; a</code>) for screen reader and keyboard usability.</li>
+</ul>

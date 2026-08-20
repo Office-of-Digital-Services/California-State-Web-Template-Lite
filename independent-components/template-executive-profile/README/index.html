@@ -1,0 +1,208 @@
+<h1>Template Executive Profile</h1>
+<p>A flexible, accessible component for displaying executive and government official profiles with photo, title, name, agency, and biographical information. The component supports three style variants: default (light background), transparent (no background), and dark (white text on dark background).</p>
+<h2>Purpose</h2>
+<p>Use this component when you need:</p>
+<ul>
+<li>Display executive/government official profile cards</li>
+<li>Show organizational leadership or staff directory</li>
+<li>Highlight key personnel with photo, title, and agency information</li>
+<li>Multiple styling variants for different page contexts</li>
+<li>Full WCAG 2.1 accessibility compliance</li>
+<li>Responsive, semantic HTML markup</li>
+</ul>
+<h2>Key Features</h2>
+<h3>Accessibility (WCAG 2.1)</h3>
+<ul>
+<li><strong>Semantic HTML</strong>: Uses <code>&lt;figure&gt;</code> and <code>&lt;h3&gt;</code> for proper document structure</li>
+<li><strong>Image alt text</strong>: Required descriptive alt attributes for profile photos</li>
+<li><strong>Color contrast</strong>: All text meets WCAG AA color contrast requirements</li>
+<li><strong>Data attributes</strong>: <code>data-variant</code> for styling instead of classes</li>
+<li><strong>Focus states</strong>: Visible focus outlines for all interactive elements (links)</li>
+<li><strong>Responsive</strong>: Adapts layout for mobile and desktop viewports</li>
+</ul>
+<h3>Style Variants</h3>
+<ul>
+<li><strong>Default</strong>: Light blue background (<code>var(--color-p2-pale)</code>) with dark text</li>
+<li><strong>Transparent</strong>: No background color, text only display</li>
+<li><strong>Dark</strong>: Dark background (<code>var(--color-p3)</code>) with white text, ideal for dark sections</li>
+</ul>
+<h3>Responsive Design</h3>
+<ul>
+<li><strong>Mobile &amp; Desktop</strong>: Consistent single-column layout with flexbox</li>
+<li><strong>Touch targets</strong>: Links have sufficient size for mobile interaction</li>
+<li><strong>Container widths</strong>: Bootstrap 5-compatible breakpoints (576px, 768px, 992px, 1200px, 1400px)</li>
+</ul>
+<h2>High-Level Structure</h2>
+<pre><code class="language-html">&lt;figure class=&quot;template-executive-profile&quot;&gt;
+  &lt;!-- Profile Photo --&gt;
+  &lt;img src=&quot;...&quot; alt=&quot;Portrait of Name, Official Title&quot; /&gt;
+
+  &lt;!-- Profile Details --&gt;
+  &lt;div data-role=&quot;executive-profile-body&quot;&gt;
+    &lt;p&gt;Official Title&lt;/p&gt;
+    &lt;h3 data-role=&quot;executive-name&quot;&gt;Name&lt;/h3&gt;
+    &lt;p&gt;Government agency&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;...&quot;&gt;Bio or contact info&lt;/a&gt;&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/figure&gt;
+</code></pre>
+<h2>Semantic Markup</h2>
+<h3>Root Container</h3>
+<pre><code class="language-html">&lt;figure class=&quot;template-executive-profile&quot;&gt;
+</code></pre>
+<p>Uses semantic <code>&lt;figure&gt;</code> element to indicate this is an illustration or self-contained content about a person.</p>
+<h3>Profile Photo</h3>
+<pre><code class="language-html">&lt;img
+  src=&quot;path/to/image.jpg&quot;
+  alt=&quot;Portrait of Name, Official Title&quot; /&gt;
+</code></pre>
+<ul>
+<li>Required <code>alt</code> text describing the person and their title</li>
+<li>Image provides visual context for the profile</li>
+<li>Flexible sizing controlled by CSS</li>
+</ul>
+<h3>Profile Details Container</h3>
+<pre><code class="language-html">&lt;div data-role=&quot;executive-profile-body&quot;&gt;
+  &lt;p&gt;Official Title&lt;/p&gt;
+  &lt;h3 data-role=&quot;executive-name&quot;&gt;Name&lt;/h3&gt;
+  &lt;p&gt;Government agency&lt;/p&gt;
+  &lt;p&gt;
+    &lt;a href=&quot;...&quot; aria-label=&quot;Link to Official's Website&quot;&gt;
+      Bio or contact info
+    &lt;/a&gt;
+  &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li><code>data-role=&quot;executive-profile-body&quot;</code>: Semantic marker for the details container</li>
+<li><code>data-role=&quot;executive-name&quot;</code>: Identifies the person's name (<code>&lt;h3&gt;</code>)</li>
+<li>Structured paragraphs for title, agency, and bio information</li>
+<li>Link with descriptive <code>aria-label</code> for accessibility</li>
+</ul>
+<h2>Variant Management with Data Attributes</h2>
+<p>Apply variants using the <code>data-variant</code> attribute on the <code>&lt;figure&gt;</code> element:</p>
+<pre><code class="language-html">&lt;!-- Default variant: light background --&gt;
+&lt;figure class=&quot;template-executive-profile&quot;&gt;
+  ...
+&lt;/figure&gt;
+
+&lt;!-- Transparent variant: no background --&gt;
+&lt;figure class=&quot;template-executive-profile&quot; data-variant=&quot;transparent&quot;&gt;
+  ...
+&lt;/figure&gt;
+
+&lt;!-- Dark variant: white text on dark background --&gt;
+&lt;figure class=&quot;template-executive-profile&quot; data-variant=&quot;dark&quot;&gt;
+  ...
+&lt;/figure&gt;
+</code></pre>
+<p>CSS selectors:</p>
+<pre><code class="language-scss">figure.template-executive-profile { /* Default styling */ }
+figure.template-executive-profile[data-variant=&quot;transparent&quot;] { /* No background */ }
+figure.template-executive-profile[data-variant=&quot;dark&quot;] { /* Dark background with white text */ }
+</code></pre>
+<h2>CSS Customization</h2>
+<p>The component uses CSS variables for theming. Override in your CSS:</p>
+<pre><code class="language-css">:root {
+  --color-p1: #fdb81e;           /* Primary accent (gold) */
+  --color-p2: #046b99;           /* Primary blue */
+  --color-p2-pale: #eef8fb;      /* Light blue background */
+  --color-p2-darker: #035376;    /* Darker blue */
+  --color-p3: #323a45;           /* Dark background */
+  --white: #fff;                 /* White text */
+  --text-muted: #5e5e6a;         /* Muted text color */
+  --link-color: #046b99;         /* Link color */
+  --link-color-hover: #035376;   /* Link hover color */
+}
+</code></pre>
+<h3>Layout Customization</h3>
+<pre><code class="language-scss">/* Flex layout for photo + details side-by-side */
+figure.template-executive-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+/* Photo dimensions */
+figure.template-executive-profile &gt; img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Details container styling */
+figure.template-executive-profile &gt; [data-role=&quot;executive-profile-body&quot;] {
+  flex: 1;
+  border-left: 1px solid var(--text-muted);
+  padding-left: 1rem;
+}
+</code></pre>
+<h3>Responsive Media Queries</h3>
+<pre><code class="language-scss">/* Adjust layout on smaller screens if needed */
+@media (width &lt; 576px) {
+  figure.template-executive-profile {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  figure.template-executive-profile &gt; [data-role=&quot;executive-profile-body&quot;] {
+    border-left: none;
+    padding-left: 0;
+  }
+}
+</code></pre>
+<h2>Files</h2>
+<ul>
+<li><code>template-executive-profile.html</code>: Markup and component structure with three variants</li>
+<li><code>template-executive-profile.html.css</code>: Styling, layout, variants, and responsive behavior</li>
+<li><code>README.md</code>: Component documentation</li>
+</ul>
+<h2>Browser Support</h2>
+<table>
+<thead>
+<tr>
+<th>Browser</th>
+<th>Support</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chrome/Edge</td>
+<td>✅ Full</td>
+<td>Full support</td>
+</tr>
+<tr>
+<td>Firefox</td>
+<td>✅ Full</td>
+<td>Full support</td>
+</tr>
+<tr>
+<td>Safari</td>
+<td>✅ Full</td>
+<td>Full support</td>
+</tr>
+<tr>
+<td>IE 11</td>
+<td>❌ Unsupported</td>
+<td>Flexbox not supported</td>
+</tr>
+</tbody>
+</table>
+<h2>Accessibility Checklist</h2>
+<ul>
+<li>✅ Semantic <code>&lt;figure&gt;</code> element usage</li>
+<li>✅ Descriptive alt text for profile images</li>
+<li>✅ Proper heading hierarchy (<code>&lt;h3&gt;</code>)</li>
+<li>✅ Color contrast meets WCAG AA</li>
+<li>✅ Focus visible on all interactive elements (links)</li>
+<li>✅ Responsive design for mobile devices</li>
+<li>✅ Touch targets ≥44×44px</li>
+<li>✅ No reliance on color alone for variant identification</li>
+</ul>
+<h2>Related Components</h2>
+<ul>
+<li><strong>template-card</strong>: Similar content container for flexible layout patterns</li>
+<li><strong>cagov-footer</strong>: May contain staff/leadership directory using this profile component</li>
+<li><strong>template-page-header</strong>: Often precedes profile listings or team pages</li>
+</ul>

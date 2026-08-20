@@ -1,0 +1,92 @@
+<h1>Template Tabs Component</h1>
+<p>The Template Tabs component is a progressively enhanced tabbed interface built on native <code>details</code> and <code>summary</code> elements. It features a class-root architecture (<code>.template-tabs-container</code>) combined with lightweight JavaScript that ensures only one tab is open at a time. The component includes responsive styling for both mobile and desktop viewports, with optional CSS custom property overrides for customization.</p>
+<h2>Initial Structure</h2>
+<p>The component's HTML structure must remain consistent, as the CSS and JavaScript rely on this exact nesting to apply styles and manage tab interaction behavior.</p>
+<pre><code class="language-html">&lt;!--
+  Tabs Container
+  Manages multiple tab panels with only one open at a time
+--&gt;
+&lt;div class=&quot;template-tabs-container&quot;&gt;
+  &lt;!-- First Tab (open by default) --&gt;
+  &lt;details name=&quot;template-tabs&quot; open&gt;
+    &lt;summary&gt;First tab&lt;/summary&gt;
+    &lt;div&gt;
+      &lt;h2&gt;First tab content&lt;/h2&gt;
+      &lt;p&gt;This is some content for the first tab.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+
+  &lt;!-- Second Tab --&gt;
+  &lt;details name=&quot;template-tabs&quot;&gt;
+    &lt;summary&gt;Second tab&lt;/summary&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Second tab content&lt;/h2&gt;
+      &lt;p&gt;This is some content for the second tab.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+
+  &lt;!-- Third Tab --&gt;
+  &lt;details name=&quot;template-tabs&quot;&gt;
+    &lt;summary&gt;Third tab&lt;/summary&gt;
+    &lt;div&gt;
+      &lt;h2&gt;Third tab content&lt;/h2&gt;
+      &lt;p&gt;This is some content for the third tab.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/details&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Component Features</h2>
+<h3>Tab Behavior</h3>
+<p>The component uses the HTML5 <code>details</code> and <code>summary</code> elements with a shared <code>name</code> attribute to create a mutually exclusive tab group:</p>
+<ul>
+<li>Only one <code>details</code> element can be open at a time</li>
+<li>Opening a new tab automatically closes the previously open tab</li>
+<li>The <code>open</code> attribute specifies which tab is initially displayed</li>
+<li>Clicking a tab header toggles its corresponding panel</li>
+<li>Already-open tabs cannot be closed by clicking their header again</li>
+</ul>
+<h3>Responsive Design</h3>
+<p>The component adapts to different screen sizes:</p>
+<ul>
+<li><strong>Mobile (&lt; 768px)</strong>: Tabs display in a stacked layout with tab headers styled with background color and larger font size</li>
+<li><strong>Desktop (≥ 768px)</strong>: Tabs display in a horizontal layout with tab headers styled inline</li>
+</ul>
+<h3>JavaScript Enhancement</h3>
+<p>The included JavaScript (<code>template-tabs.html.js</code>) provides:</p>
+<ul>
+<li>Initialization of tab behavior via the <code>setupDetailsTabs()</code> function</li>
+<li>Management of mutually exclusive open state using <code>MutationObserver</code></li>
+<li>Keyboard accessibility (Enter/Space to activate tabs)</li>
+<li>Prevention of closing the currently open tab</li>
+<li>Media query monitoring to ensure proper state management during responsive transitions</li>
+<li>Automatic addition of <code>.details-item</code> and <code>.details-tab</code> classes to managed elements</li>
+</ul>
+<h2>CSS Custom Properties</h2>
+<p>The component uses CSS custom properties for styling customization:</p>
+<h3>Mobile Styling</h3>
+<ul>
+<li><code>--tabs-mobile-background-color</code> (default: <code>#f5f5f5</code>): Background color of tab headers on mobile devices</li>
+<li><code>--link-color</code> (default: <code>#046b99</code>): Text color of tab headers</li>
+<li><code>--font-family-sans-serif</code> (default: <code>&quot;Public Sans&quot;, system-ui, -apple-system, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Helvetica Neue&quot;, &quot;Noto Sans&quot;, sans-serif</code>): Font family used for tab text</li>
+</ul>
+<h3>Example Custom Styling</h3>
+<pre><code class="language-html">&lt;style&gt;
+  :root {
+    --tabs-mobile-background-color: #e8e8e8;
+    --link-color: #0066cc;
+    --font-family-sans-serif: Arial, sans-serif;
+  }
+&lt;/style&gt;
+</code></pre>
+<h2>Framework Integration</h2>
+<p>To initialize tabs in a framework context (React, Vue, etc.), use the exposed <code>setupDetailsTabs()</code> function:</p>
+<pre><code class="language-javascript">import { setupDetailsTabs } from &quot;./template-tabs.html.js&quot;;
+
+// In component mount/useEffect
+const container = document.querySelector(&quot;.template-tabs-container&quot;);
+const cleanup = setupDetailsTabs(container);
+
+// In component unmount/cleanup
+return cleanup;
+</code></pre>
+<p>The function returns a cleanup function that removes all event listeners and disconnects observers.</p>
