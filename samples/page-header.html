@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/> <!-- BEGIN TEMPLATE_LITE -->
+<!-- Public Sans Font Load the recommended Public Sans Font. Removing this section will use System-UI font stack
+instead.
+
+More info on Typography here... https://template.webstandards.ca.gov/visual-design/typography.html --> <link
+rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/> <!-- Template Lite CSS -->
+<link
+rel="stylesheet" href="../css/template.lite.min.css"/>
+<!-- Template Lite JavaScript -->
+<script src="../js/template.lite.min.js"></script>
+<!-- END TEMPLATE_LITE -->
+<link rel="apple-touch-icon-precomposed" sizes="100x100" href="../images/apple-touch-icon-precomposed.png"/>
+<link rel="icon" sizes="192x192" href="../images/apple-touch-icon-192x192.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="180x180" href="../images/apple-touch-icon-180x180.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="../images/apple-touch-icon-152x152.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../images/apple-touch-icon-144x144.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="../images/apple-touch-icon-120x120.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../images/apple-touch-icon-114x114.png"/>
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../images/apple-touch-icon-72x72.png"/>
+<link rel="apple-touch-icon-precomposed" href="../images/apple-touch-icon-57x57.png"/>
+<link rel="shortcut icon" href="../images/apple-touch-icon-57x57.png"/>
+<link rel="apple-touch-icon" href="../images/apple-touch-icon.png"/>
+<link
+rel="shortcut icon" href="../favicon.ico"/>
+<!-- Statewide Alerts Server -->
+<script defer="defer" src="https://alert.cdt.ca.gov" crossorigin="anonymous"></script><!-- BEGIN Google Tag Manager -->
+<link rel="preconnect" href="https://www.googletagmanager.com" />
+<link rel="preconnect" href="https://www.google-analytics.com" />
+<script>
+  //*** BEGIN STATE TEMPLATE CHANGE REQUESTED
+  //Your GA4 Measurement ID that this website should use for website analytics
+  var yourGA4MeasurementId = "G-75V2BNQ3DR"; //Set to the default GA4 Measurement ID (G-75V2BNQ3D...R), please change it to the one for your organization.
+  //*** END STATE TEMPLATE CHANGE REQUESTED
+
+  //Support code to make this work, just leave this as is
+  var stateGTMAccount = "GTM-NJ6Q4MV"; //GTM-NJ6Q4MV - all ca.gov
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  (function(){dataLayer.push(arguments)})('config',yourGA4MeasurementId,{cookie_flags:'secure;samesite=lax;domain='});
+  })(window,document,'script','dataLayer',stateGTMAccount);
+</script>
+<!-- END Google Tag Manager -->
+</head>
+  <body class="primary">
+    <header role="banner" id="header">
+      <catmplt-skip-to-content>
+        <div>
+          <a href="#main-content">Skip to Main Content</a>
+        </div>
+      </catmplt-skip-to-content><catmplt-header>
+  <!-- Component start -->
+  <div class="template-header-full">
+    <!-- START > div:first-child (Utility Bar) -->
+    <div>
+      <!-- START > div:first-child > div -->
+      <div>
+        <!-- START > div:first-of-type (CA.gov Logo & Official) -->
+        <div>
+          <a href="https://www.ca.gov">
+            <span class="template-sr-only" lang="en">CA.gov website</span>
+            <svg
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 531 300"
+              title="CA.gov Logo">
+              <path
+                fill="#2F85B0"
+                d="M316 122h5c10 0 21 4 31 8c1 1 3 1 4 2c1 0 1 0 2 1l22-57l21 53h12c14 0 27 2 39 5L405 12h-51l-43 111c1-1 3-1 5-1z" />
+              <path
+                fill="#B91F39"
+                d="M181 94l-9 28h-31l24 17-8 27l24-16l24 16-8-28l23-17h-30z" />
+              <path
+                fill="#693B17"
+                d="M518 227c-1-8-7-25-13-30c3-8-1-11-3-14-1-1-5-3-7-3-6-10-20-18-39-24-12-4-27-6-44-6h-8c-15 1-38 4-44 4-2 0-8-3-15-5-8-3-17-6-24-6h-2c-6 1-21 10-27 13-4 2-16 7-20 10h-3c-9 3-15 13-18 15c0-1-4-6-8-6h-2c-6 2-5 7-5 9-1 0-3-2-6-2-1 0-2 0-4 1-6 3-3 9-4 11-2 3-10 10-12 15-1 2 0 8-1 10-2 6-16 17-17 19c0 1 3 5 8 8c4 3 9 6 12 7c8 0 25-3 29-4c1 0 3 1 6 1c2 1 5 1 8 1h3c4-1 7-3 9-5c4-4 6-8 10-10c3-1 7-2 11-2c2 0 3 0 5 1-7 12-5 27-7 30-3 2-5 5-6 7-6 9-6 16-9 18-1 0-2 1-3 1-3 0-7-1-10-1h-2c-3 1-12 9-9 11h40l8-7h20c2 0 2-3 10-8c10-4 5-22 17-37c0 0 4-3 5-3c4 0 11 8 37 8c26 0 32-9 36-9c2 0 5 3 5 4-12 20 18 42 15 43-1 0-4-2-8-2-2 0-4 0-6 1-5 2-9 8-5 9h41c1 0 1-3 1-6v-4c1-2 2-7 5-11c3-3 5-6 8-6c1 0 2 0 3 1c5 3 19 5 26 7c3 1 5 2 5 4c0 1-1 1-2 1h-1c-2 0-4-1-7-1-1 0-2 0-3 1-3 1-7 5-8 8c0 1 0 3 1 3h31c4 0 2-7 10-23c1-4-10-11-12-19c0-6-1-17-1-28z" />
+              <path
+                fill="#2F85B0"
+                d="M150 299c32 0 55-6 76-18l5-11c-7 1-14 2-20 2h-3l-2-1c-5-1-12-5-19-11-3-2-7-6-11-11-8 2-16 3-26 3-60 1-103-42-103-102C47 92 92 47 150 47c32 0 61 13 87 39l19-47c-29-24-66-38-104-38C110 1 73 15 45 42C16 69 0 107 0 150c0 87 62 149 150 149z" />
+              <path
+                fill="#326130"
+                d="M150 299c32 0 55-6 76-18l5-11c-7 1-14 2-20 2h-3l-2-1c-5-1-12-5-19-11-3-2-7-6-11-11-8 2-16 3-26 3-42 0-74-20-91-51H8c19 60 72 98 142 98z" />
+            </svg>
+          </a>
+
+          <!-- START > div:first-of-type > div -->
+          <div>
+            <!-- START > div:first-of-type > div > span -->
+            <span>Official website of the</span>
+            <!-- END > div:first-of-type > div > span -->
+            State of California
+          </div>
+          <!-- END > div:first-of-type > div -->
+        </div>
+        <!-- END > div:first-of-type (CA.gov Logo & Official) -->
+
+        <!-- START > div:nth-of-type(2) (Links) -->
+        <div>
+          <a href="https://www.ca.gov/support/index.html">Español</a>
+        </div>
+        <!-- END > div:nth-of-type(2) (Links) -->
+      </div>
+      <!-- END > div:first-child > div -->
+    </div>
+    <!-- END > div:first-child (Utility Bar) -->
+
+    <!-- START > div:last-child (Bottom Bar / Branding) -->
+    <div>
+      <!-- START > div:last-child > div -->
+      <div>
+        <!-- START > div:first-of-type (Site Logo) -->
+        <div>
+          <a
+            href="../index.html"
+            aria-label="Go to the California state government homepage">
+            <!-- START > div:first-of-type > a > div -->
+            <div>
+              <svg
+                alt="State Template Logo"
+                style="aspect-ratio: 1 / 1"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 0 56 56"
+                xml:space="preserve">
+                <g>
+                  <path
+                    d="M45,9.7c-1.9,0-30.1,0-32,0s-3,1.2-3,3s0,40,0,40c0,0.6,0.2,1.2,0.5,1.7c0.5,0.8,1.4,1.3,2.5,1.3h32
+		c1.7,0,3-1.3,3-3c0,0,0-38.3,0-40S46.9,9.7,45,9.7z M43.4,51.1H14.6V14.4h28.7V51.1z"></path>
+                  <path
+                    d="M32.2,0.3c-4.8,0-24.6,0-24.6,0C4.2,0.3,0.3,1.6,0.3,8v28.5c0,4.7,4.7,4,4.7,4v-32c0-2.5,1.8-3.4,3.9-3.4
+		h28C36.9,5.1,37,0.3,32.2,0.3z"></path>
+                </g>
+              </svg>
+
+              <!-- START > div:first-of-type > a > div > div -->
+              <div>
+                <!-- START > div:first-of-type > a > div > div > span:first-of-type -->
+                <span>State of California</span>
+                <!-- END > div:first-of-type > a > div > div > span:first-of-type -->
+                <!-- START > div:first-of-type > a > div > div > span:last-of-type -->
+                <span>Web Template Lite</span>
+                <!-- END > div:first-of-type > a > div > div > span:last-of-type -->
+              </div>
+              <!-- END > div:first-of-type > a > div > div -->
+            </div>
+            <!-- END > div:first-of-type > a > div -->
+          </a>
+        </div>
+        <!-- END > div:first-of-type (Site Logo) -->
+
+        <!-- START > details:first-of-type (Search Button) -->
+        <details
+          name="template-header-full__buttongroup"
+          aria-expanded="false"
+          aria-controls="template-header-full__cagov-search">
+          <summary>
+            <span class="template-sr-only" lang="en">CA.gov search</span>
+            <svg
+              alt=""
+              aria-hidden="true"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 2400 2400">
+              <path
+                d="M2253 1833l-71-59-224-181-317-262c65-116 99-245 99-376c0-195-75-390-226-541-147-147-342-219-541-219-411 0-760 349-760 760c0 414 343 764 757 764c154 0 308-46 439-136l326 270l223 180l77 64c38 31 93 26 124-12l106-128c31-37 26-93-12-124zm-945-546c-92 92-212 137-335 137-250 0-466-212-466-469c0-250 212-466 466-466c260 0 472 212 472 466c0 120-48 240-137 332z" />
+            </svg>
+          </summary>
+        </details>
+        <!-- END > details:first-of-type (Search Button) -->
+
+        <!-- START > div:nth-of-type(2) (Search Form) -->
+        <div id="template-header-full__cagov-search">
+          <form
+            action="../serp.html"
+            method="get"
+            role="search"
+            aria-label="Search CA.gov">
+            <label for="template-search-input" class="template-sr-only"
+              >Search this site</label
+            >
+            <input
+              type="search"
+              id="template-search-input"
+              name="q"
+              placeholder="Search this site"
+              aria-describedby="template-search-button" />
+            <button
+              type="submit"
+              id="template-search-button"
+              aria-label="Submit search">
+              <svg
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 2400 2400">
+                <path
+                  d="M2253 1833l-71-59-224-181-317-262c65-116 99-245 99-376c0-195-75-390-226-541-147-147-342-219-541-219-411 0-760 349-760 760c0 414 343 764 757 764c154 0 308-46 439-136l326 270l223 180l77 64c38 31 93 26 124-12l106-128c31-37 26-93-12-124zm-945-546c-92 92-212 137-335 137-250 0-466-212-466-469c0-250 212-466 466-466c260 0 472 212 472 466c0 120-48 240-137 332z" />
+              </svg>
+            </button>
+          </form>
+        </div>
+        <!-- END > div:nth-of-type(2) (Search Form) -->
+
+        <!-- START > details:last-of-type (Main Menu Button) -->
+        <details
+          name="template-header-full__buttongroup"
+          aria-expanded="false"
+          aria-controls="template-header-full__main-menu">
+          <summary lang="en">
+            <span class="template-sr-only">Main menu</span>
+            <span aria-hidden="true"></span>
+          </summary>
+        </details>
+        <!-- END > details:last-of-type (Main Menu Button) -->
+
+        <!-- START > div:last-of-type (Main Menu Content) -->
+        <div id="template-header-full__main-menu">
+          <nav aria-label="Main navigation">
+            <ul>
+              <li>
+                <a href="../samples/accordion.html">Components</a>
+              </li>
+              <li>
+                <a href="../about.html"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- END > div:last-of-type (Main Menu Content) -->
+      </div>
+      <!-- END > div:last-child > div -->
+    </div>
+    <!-- END > div:last-child (Bottom Bar / Branding) -->
+  </div>
+  <!-- END div.template-header-full -->
+</catmplt-header>
+</header>
+    <div id="main-content" class="main-content">
+  <div class="container pt-2">
+    <main class="main-primary" id="main">
+      <catempl-breadcrumbs>
+        <nav aria-label="Breadcrumbs">
+        <ol>
+          <li>
+            <a href="../index.html" title="Home page">Home</a>
+          </li>
+          <li>Samples</li>
+          <li>Page Header</li>
+        </ol>
+      </nav>
+      </catempl-breadcrumbs>
+      <div class="row">
+        <div
+          class="col-lg-3 pe-lg-5" role="complementary">
+          <!-- Side navigation -->
+          <catmplt-side-navigation>
+            <div>
+              <details
+                aria-label="Toggle side navigation"
+                aria-expanded="false"
+                aria-controls="template-side-navigation-content">
+                <summary>
+                  <span data-role="side-navigation-toggle">Side navigation</span>
+                </summary>
+              </details>
+              <div id="template-side-navigation-content" class="px-0">
+                <nav aria-label="Side navigation" class="side-navigation">
+                  <ul>
+                      <li>
+                        <a href="../samples/accordion.html" data-active="" >
+                          Accordion
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/banner.html" data-active="" >
+                          Banner
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/breadcrumbs.html" data-active="" >
+                          Breadcrumbs
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/buttons.html" data-active="" >
+                          Buttons
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/cagov-header.html" data-active="" >
+                          Cagov Header
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/cagov-header-full.html" data-active="" >
+                          Cagov Header Full
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/cagov-utility-header.html" data-active="" >
+                          Cagov Utility Header
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/card.html" data-active="" >
+                          Card
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/executive-profile.html" data-active="" >
+                          Executive Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/featured-search.html" data-active="" >
+                          Featured Search
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-checkbox.html" data-active="" >
+                          Form Checkbox
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-file-input.html" data-active="" >
+                          Form File Input
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-radio.html" data-active="" >
+                          Form Radio
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-select.html" data-active="" >
+                          Form Select
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-textarea.html" data-active="" >
+                          Form Textarea
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/form-textfield.html" data-active="" >
+                          Form Textfield
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/global-footer.html" data-active="" >
+                          Global Footer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/grid.html" data-active="" >
+                          Grid
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/header.html" data-active="" >
+                          Header
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/link-grid.html" data-active="" >
+                          Link Grid
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/news-list.html" data-active="" >
+                          News List
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/page-header.html" data-active="true" aria-current=&quot;page&quot;>
+                          Page Header
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/progress-tracker.html" data-active="" >
+                          Progress Tracker
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/side-navigation.html" data-active="" >
+                          Side Navigation
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/site-footer.html" data-active="" >
+                          Site Footer
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/skip-to-content.html" data-active="" >
+                          Skip To Content
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/tabs.html" data-active="" >
+                          Tabs
+                        </a>
+                      </li>
+                      <li>
+                        <a href="../samples/typography.html" data-active="" >
+                          Typography
+                        </a>
+                      </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>  
+          </catmplt-side-navigation>
+        </div>
+        <div class="col-lg-9 pb-5">
+          <h1 class="mt-lg-0">Page Header</h1>
+          <!-- BEGIN SAMPLE CONTENT -->
+          <h2>Sample</h2>
+<catmplt-page-header>
+  <!--Page Header Component
+data-page-header-bg options: "understated", "understated-gradient", "primary", "primary-gradient", "standout"
+-->
+  <div data-page-header-bg="understated-gradient">
+    <!-- Content Container -->
+    <div>
+      <h1>State template page header</h1>
+      <!-- Description -->
+      <p>This is a description of the page header.</p>
+    </div>
+  </div>
+</catmplt-page-header>
+
+<a
+  data-btn-bg="default"
+  data-btn-size="xs"
+  class="mt-5"
+  href="../standalone-samples/template-page-header.html">
+  Open standalone page header
+</a>
+
+<h2>Code and notes</h2>
+
+<catmplt-tabs>
+  <div data-name="tabs-container">
+    <details name="template-tabs">
+      <summary>HTML</summary>
+      <div>
+        <pre><code class="language-html">&lt;catmplt-page-header&gt;
+  &lt;!--Page Header Component
+data-page-header-bg options: &quot;understated&quot;, &quot;understated-gradient&quot;, &quot;primary&quot;, &quot;primary-gradient&quot;, &quot;standout&quot;
+--&gt;
+  &lt;div data-page-header-bg=&quot;understated-gradient&quot;&gt;
+    &lt;!-- Content Container --&gt;
+    &lt;div&gt;
+      &lt;h1&gt;State template page header&lt;/h1&gt;
+      &lt;!-- Description --&gt;
+      &lt;p&gt;This is a description of the page header.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/catmplt-page-header&gt;
+</code></pre>
+
+        <button
+          id="copy-html-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>CSS</summary>
+      <div>
+        <pre><code class="language-css">catmplt-page-header {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  &gt; div {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(
+      --font-family-sans-serif,
+      &quot;Public Sans&quot;,
+      system-ui,
+      -apple-system,
+      &quot;Segoe UI&quot;,
+      Roboto,
+      &quot;Helvetica Neue&quot;,
+      &quot;Noto Sans&quot;,
+      sans-serif
+    );
+    color: var(--gray-900, #3b3a48);
+    background-color: var(--color-p2-pale, #eef8fb);
+    position: relative;
+
+    /* --- Options --- */
+
+    &amp;[data-page-header-bg=&quot;understated&quot;] {
+      background-color: var(--color-p2-pale, #eef8fb);
+      color: var(--gray-900, #3b3a48);
+    }
+
+    &amp;[data-page-header-bg=&quot;understated-gradient&quot;] {
+      background: linear-gradient(
+        13deg,
+        var(--color-p2-pale, #eef8fb) 0%,
+        var(--color-p2-light, #6db7d8) 100%
+      );
+      color: var(--gray-900, #3b3a48);
+    }
+
+    &amp;[data-page-header-bg=&quot;primary&quot;] {
+      background-color: var(--color-p2, #046b99);
+      color: var(--white, #fff);
+    }
+
+    &amp;[data-page-header-bg=&quot;primary-gradient&quot;] {
+      background: linear-gradient(
+        13deg,
+        var(--color-p2-darkest, #01395e) 0%,
+        var(--color-p2, #046b99) 100%
+      );
+      color: var(--white, #fff);
+    }
+
+    &amp;[data-page-header-bg=&quot;standout&quot;] {
+      background-color: var(--color-p3, #323a45);
+      color: var(--white, #fff);
+    }
+
+    &amp; [data-page-header-h2] {
+      font-size: calc(
+        var(--font-size-h2, 2.3175rem) + var(--ratio, 0.1vw)
+      ) !important;
+    }
+
+    &amp; [data-page-header-font-weight=&quot;400&quot;] {
+      font-weight: 400 !important;
+    }
+
+    &amp; [data-page-header-font-weight=&quot;200&quot;] {
+      font-weight: 200 !important;
+    }
+
+    /* --- Regions --- */
+
+    /* Content Container */
+    &gt; div {
+      padding: 3rem 12px;
+      margin: 0 auto;
+      position: relative;
+      width: 100%;
+
+      @media (width &gt;= 576px) {
+        max-width: 540px;
+      }
+      @media (width &gt;= 768px) {
+        max-width: 720px;
+      }
+      @media (width &gt;= 992px) {
+        max-width: 960px;
+      }
+      @media (width &gt;= 1200px) {
+        max-width: 1176px;
+      }
+
+      /* Heading/Title */
+      &gt; h1 {
+        font-size: calc(var(--font-size-h1, 2.9375rem) + var(--ratio, 0.1vw));
+        font-weight: 700;
+        margin-top: 0;
+        margin-bottom: 1rem;
+        padding-top: 0.5rem;
+        line-height: 1.15;
+        text-wrap: pretty;
+      }
+
+      /* Description */
+      &gt; p {
+        font-size: calc(1.5rem + 0.1vw);
+        margin-bottom: 1.5rem;
+        margin-top: 0;
+      }
+    }
+  }
+}
+</code></pre>
+
+        <button
+          id="copy-css-code-btn"
+          data-btn-bg="default"
+          data-btn-size="xs"
+          class="mt-3">
+          Copy code
+        </button>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>JavaScript</summary>
+      <div>
+        <p>No JavaScript is required for this component.</p>
+      </div>
+    </details>
+    <details name="template-tabs">
+      <summary>About</summary>
+      <div>
+        <h1>Template Page Header Component</h1>
+<h2>Custom Tag Usage</h2>
+<p>Use this component with its custom wrapper tag:</p>
+<pre><code class="language-html">&lt;catmplt-page-header&gt;
+  &lt;!-- component markup --&gt;
+&lt;/catmplt-page-header&gt;
+</code></pre>
+<p>The Template Page Header component provides a clean, responsive header area for landing and content pages. It features a custom-tag wrapper architecture (<code>&lt;catmplt-page-header&gt;</code>) combined with data attributes and tag-based descendant selectors for variants.</p>
+<h2>Initial Structure</h2>
+<p>The component’s HTML structure must remain consistent, as the CSS utilizes direct descendant selectors (<code>&gt;</code>) based on this exact nesting to apply styles.</p>
+<pre><code class="language-html">&lt;!-- 
+  Page Header Component 
+  data-page-header-bg options: &quot;understated&quot;, &quot;understated-gradient&quot;, &quot;primary&quot;, &quot;primary-gradient&quot;, &quot;standout&quot;
+--&gt;
+&lt;div
+ 
+  data-page-header-bg=&quot;understated-gradient&quot;&gt;
+  &lt;!-- Content Container --&gt;
+  &lt;div&gt;
+    &lt;!-- Heading / Title --&gt;
+    &lt;h1&gt;State template page header&lt;/h1&gt;
+    
+    &lt;!-- Description --&gt;
+    &lt;p&gt;This is a description of the page header.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Data Attribute Selectors and Features</h2>
+<p>Instead of utility classes, this component leverages specific <code>data-page-header-*</code> attributes for modifiers and styling overrides.</p>
+<h3>Background Colors (<code>data-page-header-bg</code>)</h3>
+<p>Applied to the root <code>&lt;catmplt-page-header&gt;</code> element.</p>
+<ul>
+<li><code>data-page-header-bg=&quot;understated&quot;</code>: Sets a light blue background (<code>#eef8fb</code>) and dark text.</li>
+<li><code>data-page-header-bg=&quot;understated-gradient&quot;</code>: Sets a light blue gradient background and dark text.</li>
+<li><code>data-page-header-bg=&quot;primary&quot;</code>: Sets a solid primary blue background (<code>#046b99</code>) and white text.</li>
+<li><code>data-page-header-bg=&quot;primary-gradient&quot;</code>: Sets a dark-to-primary blue gradient background and white text.</li>
+<li><code>data-page-header-bg=&quot;standout&quot;</code>: Sets a dark slate background (<code>#323a45</code>) and white text.</li>
+</ul>
+<h3>Typography &amp; Headings</h3>
+<p>Applied to internal elements within the content container.</p>
+<ul>
+<li><code>data-page-header-h2</code>: Forces the font size of an element to match an <code>h2</code> scale (<code>calc(2.3175rem + 0.1vw)</code>).</li>
+<li><code>data-page-header-font-weight=&quot;400&quot;</code>: Forces the font weight to normal/400.</li>
+<li><code>data-page-header-font-weight=&quot;200&quot;</code>: Forces the font weight to light/200.</li>
+</ul>
+<h2>Structural Regions</h2>
+<ul>
+<li><strong>Root Container</strong>: The main component wrapper that handles background colors and alignment.</li>
+<li><strong>Content Container</strong>: An inner wrapper that manages padding, maximum width, and centering.</li>
+<li><strong>Heading/Title</strong>: The primary page title (<code>h1</code>).</li>
+<li><strong>Description</strong>: A supporting paragraph (<code>p</code>) for additional context.</li>
+</ul>
+
+      </div>
+    </details>
+  </div>
+</catmplt-tabs>
+<style>
+  catmplt-tabs [data-name="tabs-container"] pre {
+      overflow-x: auto;
+      padding: 1rem;
+      border: 1px solid #d4d4d7;
+      background-color: #f0f0f0;
+  }
+
+  catmplt-tabs [data-name="tabs-container"] > details > div > h1 {
+      display: none;
+  }
+</style>
+<script>
+  (() => {
+    const copyButtons = document.querySelectorAll('[id^="copy-"][id$="-code-btn"]');
+    if (!copyButtons.length) return;
+
+    copyButtons.forEach((copyButton) => {
+        copyButton.addEventListener('click', async () => {
+            const codeBlock = copyButton.closest('details')?.querySelector('code');
+            const codeToCopy = codeBlock?.innerText?.trim();
+
+            if (!codeToCopy) return;
+
+            const originalLabel = copyButton.textContent;
+
+            try {
+                await navigator.clipboard.writeText(codeToCopy);
+                copyButton.textContent = 'Copied!';
+            } catch {
+                copyButton.textContent = 'Copy failed';
+            }
+
+            setTimeout(() => {
+                copyButton.textContent = originalLabel;
+            }, 1500);
+        });
+    });
+})();
+</script>
+
+          <!-- END SAMPLE CONTENT -->
+        </div>
+      </div>
+    </main>
+  </div>
+</div><catmplt-footer>
+<footer>
+  <div>
+    <div>
+      <a href="https://www.ca.gov">
+        <span>CA.gov</span>
+        <?xml version="1.0" encoding="utf-8"?>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 15 378 210" aria-hidden="true" alt="">
+          <defs>
+            <linearGradient id="grad0" gradientUnits="userSpaceOnUse" x2="0" y2="210">
+              <stop offset="74.5%" stop-color="#2f85b0"/>
+              <stop offset="75%" stop-color="#326130"/>
+            </linearGradient>
+            <linearGradient id="grad1" gradientUnits="userSpaceOnUse" y1="114" x2="0" y2="225">
+              <stop offset="0" stop-color="#8B5A24"/>
+              <stop offset="1" stop-color="#441A12"/>
+            </linearGradient>
+          </defs>
+          <path fill="#B91F39" d="M135 100l-7 -20l-7 20h-21l17 13l-6 20l17 -13l17 13l-6 -20l17 -13h-21Z"/>
+          <g fill="url(#grad0)">
+            <path d="M106 225c22 0 39-4 54-13l3-8c-5 1-10 1-14 1h-2l-2 0c-4-1-8-3-13-7c-2-2-5-4-8-7c-6 1-12 2-18 2c-43 0-73-30-73-73c0-41
+              32-72 72-72c23 0 43 9 61 28l14 -34c-21-17-47-27-74-27c-29 0-55 10-75 29C11 63 0 90 0 120C0 182 44 225 106 225z"/>
+            <path d="M223 100c2 0 3 0 4 0c7 0 15 3 22 6c1 0 2 1 3 1c0 0 1 0 1 1l15-39l15 38c1 0 1 0 2 0c1 0 3 0 4 0c0 0 1 0 1 0c10 0 19 1
+            28 3l-33-86h-35l-29 76Z"/>
+          </g>
+          <path
+            fill="url(#grad1)"
+            d="M365 174c0-6-5-18-9-22c2-5-1-8-2-10c-1-1-4-2-5-2c-5-7-14-13-28-17c-9-3-19-4-31-4c-1 0-1 0-2 0c-1 0-2 0-4 0c-11 1-27
+              3-31 3c-2 0-6-2-10-4c-6-2-12-5-17-5c-1 0-1 0-1 0c-5 1-15 7-19 9c-3 1-11 5-14 7c-1 0-2 0-2 0c-6 2-11 9-12 10c0-1-3-4-6-4c0
+              0-1 0-1 0c-4 2-4 5-4 6c-1 0-2-2-4-2c-1 0-2 0-3 1c-4 2-2 6-3 8c-2 2-7 7-9 11c-1 1 0 5-1 7c-2 4-11 12-12 13c0 1 2 3 5 6c3 2
+              6 4 8 5c6 0 18-2 21-3c1 0 2 1 4 1c2 0 3 1 6 1c1 0 1 0 2 0c3-1 5-2 6-3c3-3 4-6 7-7c2-1 5-2 7-2c1 0 2 0 3 1C200 187 202 198
+              200 200c-2 2-3 4-4 5c-4 6-5 12-6 13c-1 0-1 0-2 0c-2 0-5-1-7-1c-1 0-1 0-1 0c-2 1-8 6-6 7c1 0 10 0 20 0h9c0 0 6-5 6-5h14c1
+              0 1-2 7-5c7-3 4-16 12-26c0 0 3-2 3-2c3 0 8 5 26 5c18 0 23-6 25-6c1 0 4 2 4 3c-8 14 12 29 11 30c-1 0-3-1-6-1c-1 0-3 0-4
+              1c-3 1-6 5-3 7c1 0 9 0 17 0c5 0 9 0 12 0c1 0 1-2 1-4c0-1 0-2 0-3c1-1 2-5 4-8c2-2 4-4 6-4c1 0 1 0 2 1c4 2 13 3 18 5c2 1 4
+              2 4 3c0 1-1 1-1 1c0 0-1 0-1 0c-1 0-3-1-5-1c-1 0-2 0-2 0c-2 1-5 3-5 5c0 1 0 2 1 2h22c3 0 2-5 7-16c1-3-7-7-8-13C366 190 365
+              175 365 174z"/>
+        </svg>
+      </a>
+      <ul>
+        <li>
+          <a href="../conditions-of-use.html">Conditions of use</a>
+        </li>
+        <li>
+          <a href="../privacy-policy.html">Privacy policy</a>
+        </li>
+        <li>
+          <a href="../accessibility.html">
+            Accessibility
+          </a>
+        </li>
+       
+      </ul>
+      <div>
+        ©
+        <span id="thisyear">
+          <script>
+            document.getElementById('thisyear').appendChild(document.createTextNode(new Date().getFullYear()))
+          </script>
+        </span>
+        State of California
+      </div>
+    </div>
+  </div>
+</footer>
+</catmplt-footer></body></html>

@@ -1,0 +1,46 @@
+<catmplt-form-radio>
+  <!-- 
+  Form radio buttons component
+  
+  Structure:
+  - Uses <fieldset> with <legend> for semantic grouping (accessible to screen readers)
+  - Each radio button is wrapped in a div with class template-form-radio
+  - Radio button and label are associated via id/for attributes
+  - All radio buttons in a group must have the same 'name' attribute
+  
+  Attributes:
+  - name: Group identifier (all radios in a group must share the same name)
+  - value: Unique identifier for each radio option (required for form submission)
+  - data-border-dark="true": Changes the radio button border color to darker gray (--gray-700) instead of default
+-->
+  <fieldset>
+    <legend>Pick one of these items:</legend>
+    <div>
+      <input
+        type="radio"
+        name="options"
+        value="option1"
+        id="RadioOption1"
+        data-border-dark="true" />
+      <label for="RadioOption1">Option 1</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        name="options"
+        value="option2"
+        id="RadioOption2"
+        data-border-dark="true" />
+      <label for="RadioOption2">Option 2</label>
+    </div>
+    <div>
+      <input
+        type="radio"
+        name="options"
+        value="option3"
+        id="RadioOption3"
+        data-border-dark="true" />
+      <label for="RadioOption3">Option 3</label>
+    </div>
+  </fieldset>
+</catmplt-form-radio>

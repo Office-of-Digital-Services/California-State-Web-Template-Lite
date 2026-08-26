@@ -1,0 +1,100 @@
+
+<!-- This meta tag is for responsive design and ensures the page scales correctly on different devices. 
+ Omit it if your site has a different method for handling responsive design. -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<catmplt-form-textfield>
+  <!-- 
+  Form textfield component
+  
+  Attributes:
+  - data-required="true": Adds a red asterisk (*) before the label to indicate a required field
+  - data-border-dark="true": Changes the border color to a darker gray (--gray-700) instead of default
+  - required: HTML5 required attribute to enforce validation
+-->
+  <label data-required="true" for="InputName">Full name</label>
+  <input
+    type="text"
+    id="InputName"
+    placeholder="Full name"
+    data-border-dark="true"
+    required />
+</catmplt-form-textfield>
+
+
+<style>
+  catmplt-form-textfield {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  & label {
+    box-sizing: border-box;
+    margin-bottom: 0.5rem;
+    font-family: var(
+      --font-family-sans-serif,
+      "Public Sans",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      "Noto Sans",
+      sans-serif
+    );
+    font-weight: 600;
+    font-size: calc(1rem * 1.125);
+    line-height: 1.5;
+    color: var(--text-color, #3b3a48);
+    position: relative;
+    display: inline-block;
+    cursor: default;
+  }
+
+  & label[data-required="true"]::before {
+    content: " *";
+    color: var(--text-required-color, #cd402d);
+  }
+
+  & input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    font-family: var(
+      --font-family-sans-serif,
+      "Public Sans",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      "Noto Sans",
+      sans-serif
+    );
+    font-size: 1.375rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--text-color, #3b3a48);
+    background-color: var(--body-bg, #fff);
+    background-clip: padding-box;
+    border: 1px solid var(--gray-300, #d2d2d6);
+    border-radius: none;
+    display: block;
+
+    &[data-border-dark="true"] {
+      border-color: var(--gray-700, #5e5e6a);
+    }
+
+    &:focus {
+      outline: 2px solid var(--outline-default-color, #0b8ee5);
+      outline-offset: 2px;
+      box-shadow: none;
+    }
+  }
+}
+
+</style>

@@ -1,0 +1,195 @@
+catmplt-tabs {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  > div {
+    > details {
+      margin-bottom: 0.75rem;
+      font-family: var(
+        --font-family-sans-serif,
+        "Public Sans",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        "Roboto",
+        "Helvetica Neue",
+        "Noto Sans",
+        sans-serif
+      );
+    }
+  }
+
+  @media (width <= 767px) {
+    > div {
+      > details {
+        margin-bottom: 0.75rem;
+        border: 1px solid var(--border-color-default, #d4d4d7);
+
+        > summary {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 0.875rem 1rem;
+          background: var(--tabs-mobile-background-color, #f5f5f5);
+          color: var(--link-color, #046b99);
+          font-size: 1.25rem;
+          font-weight: 700;
+          line-height: 1.15;
+          list-style: none;
+          cursor: pointer;
+          box-sizing: border-box;
+
+          &::marker {
+            display: none;
+            content: "";
+          }
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+
+          &::after {
+            content: "";
+            display: inline-block;
+            text-decoration: none;
+            position: absolute;
+            width: 0.45rem;
+            height: 0.45rem;
+            border-top: 2px solid var(--gray-900, #3b3a48);
+            border-left: 2px solid var(--gray-900, #3b3a48);
+            right: 1rem;
+            top: 50%;
+            vertical-align: middle;
+            transform-origin: center;
+            transform: translateY(-50%) rotate(135deg);
+            transition: transform 300ms ease-in-out;
+          }
+
+          &:focus {
+            outline: 2px solid var(--outline-default-color, #0b8ee5);
+            outline-offset: -2px;
+          }
+        }
+
+        &[open] > summary {
+          color: var(--gray-900, #3b3a48);
+          border-left: 4px solid var(--color-p1, #fdb81e);
+          padding-left: calc(1.5rem - 4px);
+        }
+
+        &[open] > summary::after {
+          transform: translate(-0.125rem, -50%) rotate(225deg);
+        }
+
+        &[open] > div {
+          padding: 1rem;
+        }
+      }
+    }
+  }
+
+  @media (width >= 768px) {
+    > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: stretch;
+      width: 100%;
+
+      > details {
+        display: contents;
+
+        > summary {
+          order: 1;
+          position: relative;
+          display: flex;
+          font-weight: 700;
+          justify-content: center;
+          align-items: center;
+          flex: 0 0 auto;
+          cursor: pointer;
+          border: none;
+          padding: 0.75rem 1rem;
+          list-style: none;
+          white-space: nowrap;
+          color: var(--link-color, #046b99);
+
+          &::marker {
+            display: none;
+            content: "";
+          }
+
+          &::-webkit-details-marker {
+            display: none;
+          }
+        }
+
+        + details > summary {
+          border-left: none;
+        }
+
+        > summary:focus {
+          outline: 2px solid var(--outline-default-color, #0b8ee5);
+          outline-offset: -2px;
+        }
+
+        &:first-child > summary {
+          border-top-left-radius: 4px;
+        }
+
+        &:last-child > summary {
+          border-top-right-radius: 4px;
+        }
+
+        &:not([open]) > summary:hover,
+        &:not([open]) > summary:focus {
+          color: var(--link-color-hover, #214a68);
+        }
+
+        > div {
+          order: 2;
+          flex: 0 0 100%;
+          display: none;
+          border: 1px solid var(--border-color-default, #d4d4d7);
+          border-radius: 0 0 4px 4px;
+          padding: 1rem;
+          width: 100%;
+          box-sizing: border-box;
+          background: var(--tabs-body-background-color, #fff);
+        }
+
+        /* stylelint-disable-next-line selector-pseudo-element-no-unknown */
+        &[open]::details-content {
+          display: contents;
+        }
+
+        &[open] > div {
+          display: block;
+        }
+
+        &[open] > summary {
+          font-weight: 700;
+          background: var(--tabs-background-color, #fff);
+          color: var(--gray-900, #3b3a48);
+        }
+
+        &[open] > summary::after {
+          left: 0;
+          bottom: 0;
+          position: absolute;
+          content: "";
+          width: 100%;
+          border-bottom: 3px solid;
+          border-color: var(--color-p1, #fdb81e);
+        }
+      }
+    }
+  }
+}

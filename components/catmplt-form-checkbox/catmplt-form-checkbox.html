@@ -1,0 +1,47 @@
+<catmplt-form-checkbox>
+  <!-- 
+  Form checkboxes component
+  
+  Structure:
+  - Uses <fieldset> with <legend> for semantic grouping (accessible to screen readers)
+  - Each checkbox is wrapped in a div
+  - Checkbox and label are associated via id/for attributes
+  
+  Attributes:
+  - value: Unique identifier for each checkbox option (required for form submission)
+  - data-border-dark="true": Changes the checkbox border color to darker gray (--gray-700) instead of default
+-->
+  <fieldset>
+    <legend>Pick one or more of these items:</legend>
+    <div>
+      <input
+        type="checkbox"
+        value="option1"
+        id="CheckOption1"
+        data-border-dark="true" />
+      <label class="template-form-checkbox-label" for="CheckOption1"
+        >Option 1</label
+      >
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        value="option2"
+        id="CheckOption2"
+        data-border-dark="true" />
+      <label class="template-form-checkbox-label" for="CheckOption2"
+        >Option 2</label
+      >
+    </div>
+    <div>
+      <input
+        type="checkbox"
+        value="option3"
+        id="CheckOption3"
+        data-border-dark="true" />
+      <label class="template-form-checkbox-label" for="CheckOption3"
+        >Option 3</label
+      >
+    </div>
+  </fieldset>
+</catmplt-form-checkbox>

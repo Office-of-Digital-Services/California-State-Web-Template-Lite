@@ -1,0 +1,147 @@
+
+<!-- This meta tag is for responsive design and ensures the page scales correctly on different devices. 
+ Omit it if your site has a different method for handling responsive design. -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<catmplt-featured-search>
+  <!-- 
+  Featured Search Component 
+  data-variant options: "dark"
+  -->
+  <form class="template-featured-search" action="../serp.html">
+    <span id="TemplateSearchInput" data-sr-only="true"
+      >Custom Google Search</span
+    >
+    <input
+      type="search"
+      name="q"
+      aria-labelledby="TemplateSearchInput"
+      placeholder="Search" />
+    <button type="submit">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        width="34"
+        height="34"
+        aria-hidden="true"
+        viewBox="0 0 2400 2400">
+        <path
+          d="M2253 1833l-71-59-224-181-317-262c65-116 99-245 99-376c0-195-75-390-226-541-147-147-342-219-541-219-411 0-760 349-760 760c0 414 343 764 757 764c154 0 308-46 439-136l326 270l223 180l77 64c38 31 93 26 124-12l106-128c31-37 26-93-12-124zm-945-546c-92 92-212 137-335 137-250 0-466-212-466-469c0-250 212-466 466-466c260 0 472 212 472 466c0 120-48 240-137 332z" />
+      </svg>
+      <span data-sr-only="true">Submit</span>
+    </button>
+  </form>
+</catmplt-featured-search>
+
+
+<style>
+  catmplt-featured-search {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Featured Search Component */
+  & form {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: var(
+      --font-family-sans-serif,
+      "Public Sans",
+      system-ui,
+      -apple-system,
+      "Segoe UI",
+      Roboto,
+      "Helvetica Neue",
+      "Noto Sans",
+      sans-serif
+    );
+    color: var(--gray-900, #3b3a48);
+    position: relative;
+    line-height: 1.5;
+    display: flex;
+
+    /* Screen reader only content */
+    & span[data-sr-only="true"] {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+
+    > input {
+      width: 100%;
+      padding: 0.75rem 0 0.75rem 0.75rem;
+      font-size: 20px;
+      border: 2px solid var(--color-p2, #046b99);
+      border-right: 0;
+      border-top-left-radius: 0.25rem;
+      border-bottom-left-radius: 0.25rem;
+      outline: none;
+      outline-offset: 5px;
+      transition:
+        border-color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+
+      /* Hide the reset/clear button across all browsers */
+      &::-webkit-search-cancel-button {
+        display: none;
+      }
+
+      &:focus {
+        outline: 2px solid var(--outline-default-color, #0b8ee5);
+        box-shadow: none;
+        outline-offset: -5px;
+      }
+    }
+
+    > button {
+      padding: 0 0.75rem;
+      font-size: 30px;
+      line-height: 1;
+      border: 2px solid var(--color-p2, #046b99);
+      border-left: 0;
+      border-top-right-radius: 0.25rem;
+      border-bottom-right-radius: 0.25rem;
+      background-color: var(--white, #fff);
+      color: var(--gray-900, #3b3a48);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline-offset: 5px;
+      transition:
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out;
+
+      > svg {
+        display: block;
+        flex-shrink: 0;
+      }
+
+      &:hover {
+        background-color: var(--gray-200, #d4d4d7);
+        color: var(--gray-900, #3b3a48);
+        box-shadow: none;
+      }
+
+      &:focus {
+        outline: 2px solid var(--outline-default-color, #0b8ee5);
+        outline-offset: -5px;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+</style>
