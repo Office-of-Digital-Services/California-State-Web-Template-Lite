@@ -1421,14 +1421,14 @@ catmplt-accordion section details:is([open]:not(.is-closing), .is-opening) > sum
 catmplt-accordion section details:is([open]:not(.is-closing), .is-opening) > summary::after {
           transform: translate(0.125rem, -50%) rotate(225deg);
         }
-catempl-banner *,
-  catempl-banner *::before,
-  catempl-banner *::after {
+catmplt-banner *,
+  catmplt-banner *::before,
+  catmplt-banner *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-catempl-banner > section {
+catmplt-banner > section {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -1450,15 +1450,15 @@ catempl-banner > section {
     position: relative;
   }
 /* --- Background Options (`data-bg`) --- */
-catempl-banner > section[data-bg="understated"] {
+catmplt-banner > section[data-bg="understated"] {
       background-color: var(--color-p2-pale, #eef8fb);
       color: var(--gray-900, #3b3a48);
     }
-catempl-banner > section[data-bg="primary"] {
+catmplt-banner > section[data-bg="primary"] {
       background-color: var(--color-p2, #046b99);
       color: var(--white, #fff);
     }
-catempl-banner > section[data-bg="primary-gradient"] {
+catmplt-banner > section[data-bg="primary-gradient"] {
       background: linear-gradient(
         180deg,
         var(--color-p2-darkest, #01395e) 20.31%,
@@ -1466,24 +1466,24 @@ catempl-banner > section[data-bg="primary-gradient"] {
       );
       color: var(--white, #fff);
     }
-catempl-banner > section[data-bg="standout"] {
+catmplt-banner > section[data-bg="standout"] {
       background-color: var(--color-p3, #323a45);
       color: var(--white, #fff);
     }
 /* --- Typography Modifiers --- */
-catempl-banner > section [data-h2] {
+catmplt-banner > section [data-h2] {
       font-size: calc(
         var(--font-size-h2, 2.3175rem) + var(--ratio, 0.1vw)
       ) !important;
     }
-catempl-banner > section [data-font-weight="400"] {
+catmplt-banner > section [data-font-weight="400"] {
       font-weight: 400 !important;
     }
-catempl-banner > section [data-font-weight="200"] {
+catmplt-banner > section [data-font-weight="200"] {
       font-weight: 200 !important;
     }
 /* --- 1st Child: Image Container --- */
-catempl-banner > section > div:first-of-type {
+catmplt-banner > section > div:first-of-type {
       position: relative;
       top: 0;
       right: 0;
@@ -1492,7 +1492,7 @@ catempl-banner > section > div:first-of-type {
       order: 1;
     }
 @media (min-width: 1200px) {
-catempl-banner > section > div:first-of-type {
+catmplt-banner > section > div:first-of-type {
         display: flex;
         position: absolute;
         top: 0;
@@ -1501,7 +1501,7 @@ catempl-banner > section > div:first-of-type {
         width: 100%
     }
       }
-catempl-banner > section > div:first-of-type > img {
+catmplt-banner > section > div:first-of-type > img {
         width: 100%;
         height: auto;
         max-height: 300px;
@@ -1510,7 +1510,7 @@ catempl-banner > section > div:first-of-type > img {
         margin-left: auto;
       }
 @media (min-width: 1200px) {
-catempl-banner > section > div:first-of-type > img {
+catmplt-banner > section > div:first-of-type > img {
           width: auto;
           max-height: 100%;
           object-fit: contain;
@@ -1519,7 +1519,7 @@ catempl-banner > section > div:first-of-type > img {
       }
         }
 /* Image Modifiers (`data-image`) */
-catempl-banner > section > div:first-of-type > img[data-image="fade-left"] {
+catmplt-banner > section > div:first-of-type > img[data-image="fade-left"] {
           /* For Chrome, Safari, Edge */
           -webkit-mask-image: linear-gradient(
             to bottom,
@@ -1529,7 +1529,7 @@ catempl-banner > section > div:first-of-type > img[data-image="fade-left"] {
           mask-image: linear-gradient(to bottom, transparent, black 30%);
         }
 @media (min-width: 1200px) {
-catempl-banner > section > div:first-of-type > img[data-image="fade-left"] {
+catmplt-banner > section > div:first-of-type > img[data-image="fade-left"] {
             /* For Chrome, Safari, Edge */
             -webkit-mask-image: linear-gradient(
               to right,
@@ -1540,7 +1540,7 @@ catempl-banner > section > div:first-of-type > img[data-image="fade-left"] {
         }
           }
 /* --- 2nd Child: Content Container --- */
-catempl-banner > section > div:last-of-type {
+catmplt-banner > section > div:last-of-type {
       box-sizing: border-box;
       order: 0;
       padding: 0 12px 3rem;
@@ -1549,36 +1549,36 @@ catempl-banner > section > div:last-of-type {
       width: 100%;
     }
 @media (min-width: 576px) {
-catempl-banner > section > div:last-of-type {
+catmplt-banner > section > div:last-of-type {
         max-width: 540px
     }
       }
 @media (min-width: 768px) {
-catempl-banner > section > div:last-of-type {
+catmplt-banner > section > div:last-of-type {
         max-width: 720px
     }
       }
 @media (min-width: 992px) {
-catempl-banner > section > div:last-of-type {
+catmplt-banner > section > div:last-of-type {
         max-width: 960px
     }
       }
 @media (min-width: 1200px) {
-catempl-banner > section > div:last-of-type {
+catmplt-banner > section > div:last-of-type {
         max-width: 1176px
     }
       }
 /* Content Column Wrapper */
-catempl-banner > section > div:last-of-type > div {
+catmplt-banner > section > div:last-of-type > div {
         width: 100%;
       }
 @media (min-width: 1200px) {
-catempl-banner > section > div:last-of-type > div {
+catmplt-banner > section > div:last-of-type > div {
           width: 50%
       }
         }
 /* Heading element */
-catempl-banner > section > div:last-of-type > div > :is(h1, h2, h3, h4, h5, h6) {
+catmplt-banner > section > div:last-of-type > div > :is(h1, h2, h3, h4, h5, h6) {
           font-size: calc(var(--font-size-h1, 2.9375rem) + var(--ratio, 0.1vw));
           font-weight: 700;
           margin-top: 0;
@@ -1588,21 +1588,21 @@ catempl-banner > section > div:last-of-type > div > :is(h1, h2, h3, h4, h5, h6) 
           text-wrap: pretty;
         }
 /* Description */
-catempl-banner > section > div:last-of-type > div > p {
+catmplt-banner > section > div:last-of-type > div > p {
           font-size: calc(1.5rem + 0.1vw);
           margin-bottom: 1.5rem;
           margin-top: 1rem;
           line-height: 1.5;
         }
 /* Actions Container */
-catempl-banner > section > div:last-of-type > div > div {
+catmplt-banner > section > div:last-of-type > div > div {
           display: flex;
           justify-content: flex-start;
           flex-wrap: wrap;
           padding-top: 1.5rem;
           gap: 1rem;
         }
-catempl-banner > section > div:last-of-type > div > div > a {
+catmplt-banner > section > div:last-of-type > div > div > a {
             display: inline-block;
             padding: 0.75rem 1.5rem;
             border-radius: 4px;
@@ -1614,37 +1614,37 @@ catempl-banner > section > div:last-of-type > div > div > a {
               color 0.2s;
           }
 /* Primary Action (Default - No data-action) */
-catempl-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]) {
+catmplt-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]) {
             background: var(--color-p1-soft, #f2c45a);
             color: var(--gray-900, #3b3a48);
             border: none;
           }
-catempl-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]):hover,
-          catempl-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]):focus {
+catmplt-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]):hover,
+          catmplt-banner > section > div:last-of-type > div > div > a:not([data-action="secondary"]):focus {
             background: var(--color-p1-softer, #f5ce73);
             color: var(--black, #000);
             box-shadow: var(--shadow-strong, 0 2px 4px rgba(0 0 0 / 50%));
           }
 /* Secondary Action (`data-action="secondary"`) */
-catempl-banner > section > div:last-of-type > div > div > a[data-action="secondary"] {
+catmplt-banner > section > div:last-of-type > div > div > a[data-action="secondary"] {
             background-color: var(--color-p2, #046b99);
             color: var(--white, #fff);
             border: 1px solid var(--white, #fff);
           }
-catempl-banner > section > div:last-of-type > div > div > a[data-action="secondary"]:hover,
-          catempl-banner > section > div:last-of-type > div > div > a[data-action="secondary"]:focus {
+catmplt-banner > section > div:last-of-type > div > div > a[data-action="secondary"]:hover,
+          catmplt-banner > section > div:last-of-type > div > div > a[data-action="secondary"]:focus {
             background-color: var(--color-p2-darker, #035376);
             color: var(--white, #fff);
             box-shadow: var(--shadow-strong, 0 2px 4px rgba(0 0 0 / 50%));
           }
-catempl-breadcrumbs *,
-  catempl-breadcrumbs *::before,
-  catempl-breadcrumbs *::after {
+catmplt-breadcrumbs *,
+  catmplt-breadcrumbs *::before,
+  catmplt-breadcrumbs *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-catempl-breadcrumbs nav > ol {
+catmplt-breadcrumbs nav > ol {
       padding: 0.5em 1rem;
       padding-left: 0;
       margin-bottom: 2rem;
@@ -1665,30 +1665,30 @@ catempl-breadcrumbs nav > ol {
       font-size: var(--font-size-small, 0.875rem);
     }
 @media (min-width: 576px) {
-catempl-breadcrumbs nav > ol {
+catmplt-breadcrumbs nav > ol {
         font-size: calc(var(--font-size-small, 0.875rem) + var(--ratio, 0.1vw))
     }
       }
-catempl-breadcrumbs nav > ol > li {
+catmplt-breadcrumbs nav > ol > li {
         position: relative;
         padding-left: 0.75rem;
         padding-right: 0.75rem;
       }
-catempl-breadcrumbs nav > ol > li > a {
+catmplt-breadcrumbs nav > ol > li > a {
           padding: 0.375rem 0;
           color: var(--color-p2, #046b99);
         }
-catempl-breadcrumbs nav > ol > li > a:hover,
-          catempl-breadcrumbs nav > ol > li > a:focus {
+catmplt-breadcrumbs nav > ol > li > a:hover,
+          catmplt-breadcrumbs nav > ol > li > a:focus {
             color: var(--color-p2-darker, #035376);
           }
-catempl-breadcrumbs nav > ol > li > a:focus {
+catmplt-breadcrumbs nav > ol > li > a:focus {
             outline: 2px solid var(--outline-default-color, #0b8ee5);
           }
-catempl-breadcrumbs nav > ol > li:first-child {
+catmplt-breadcrumbs nav > ol > li:first-child {
           padding-left: 0;
         }
-catempl-breadcrumbs nav > ol > li::after {
+catmplt-breadcrumbs nav > ol > li::after {
           content: "";
           color: var(--text-muted, var(--gray-700, #5e5e6a));
           border: none;
@@ -1702,19 +1702,19 @@ catempl-breadcrumbs nav > ol > li::after {
           right: -9px;
           transform: rotate(15deg);
         }
-catempl-breadcrumbs nav > ol > li:last-child::after {
+catmplt-breadcrumbs nav > ol > li:last-child::after {
           border-left: none;
           margin: 0;
         }
-catempl-breadcrumbs nav[data-mode="dark"] {
+catmplt-breadcrumbs nav[data-mode="dark"] {
       color: var(--white, #fff);
     }
-catempl-breadcrumbs nav[data-mode="dark"] > ol > li {
+catmplt-breadcrumbs nav[data-mode="dark"] > ol > li {
         color: var(--white, #fff);
       }
-catempl-breadcrumbs nav[data-mode="dark"] > ol > li > a,
-        catempl-breadcrumbs nav[data-mode="dark"] > ol > li > a:hover,
-        catempl-breadcrumbs nav[data-mode="dark"] > ol > li > a:focus {
+catmplt-breadcrumbs nav[data-mode="dark"] > ol > li > a,
+        catmplt-breadcrumbs nav[data-mode="dark"] > ol > li > a:hover,
+        catmplt-breadcrumbs nav[data-mode="dark"] > ol > li > a:focus {
           color: var(--white, #fff);
         }
 *,
